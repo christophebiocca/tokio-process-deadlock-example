@@ -8,7 +8,8 @@ use futures::{Future,IntoFuture,Stream,stream};
 
 // Manually inlining the code at its call site also seems to fix the issue, which seems insane to me?
 fn run_command(idx: usize) -> impl Future<Item=bool, Error=io::Error> {
-    let child_status = Command::new("ls")
+    let child_status = Command::new("echo")
+        .arg(format!("I am spawned process #{}", idx))
         // The folllowing lines can be uncommented and the bug will still occur.
         //.stdin(Stdio::null())
         //.stdout(Stdio::null())
