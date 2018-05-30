@@ -1,0 +1,8 @@
+[package]
+name = "tokio-process-deadlock-example"
+version = "0.1.0"
+authors = ["Christophe Biocca <christophe.biocca@gmail.com>"]
+
+[dependencies]
+futures = "0.1"
+tokio-process = "0.2"
