@@ -5,4 +5,5 @@ authors = ["Christophe Biocca <christophe.biocca@gmail.com>"]
 
 [dependencies]
 futures = "0.1"
-tokio-process = "0.2"
+tokio-process = "^0.2,>=0.2.2"
+tokio-signal = "^0.2,>=0.2.2"
